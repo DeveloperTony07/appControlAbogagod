@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- titles-->
+    <dimen name="titles_size">32dp</dimen>
+    <dimen name="subtitle">16dp</dimen>
+</resources>

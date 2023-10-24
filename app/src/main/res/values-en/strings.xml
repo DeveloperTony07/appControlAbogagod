@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">appAbogadosTN</string>
+    <!-- Start act_Welcome -->
+    <string name="title_welcome">Manage your clients \nand cases..!</string>
+    <string name="subtitle_welcome">Easily assign appointments.</string>
+    <string name="btn_login">Login</string>
+    <string name="btn_register">Sing Up</string>
+    <!-- End act_Welcome -->
+    <!-- Start act_Register -->
+    <string name="txt_login">Login</string>
+    <string name="subtitle_login">Enter your details to log in</string>
+    <string name="txt_id_number">ID Number</string>
+    <string name="txt_password">Password</string>
+    <!-- End act_Login-->
+
+    <!-- Start act_Register -->
+    <!-- text register -->
+    <string name="txt_register">Register</string>
+    <string name="subtitle_register">Create an account to enter</string>
+    <string name="txt_user_name">User name</string>
+    <string name="txt_next">Next</string>
+    <string name="txt_phone_number">Phone number</string>
+    <string name="txt_email">Email</string>
+    <string name="txt_back">Back</string>
+    <string name="txt_confirm_password">Confirm your password</string>
+
+</resources>
