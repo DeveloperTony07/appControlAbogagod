@@ -1,5 +1,6 @@
 package com.example.appabogadostn;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -9,52 +10,19 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.Toast;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link frm_Register3#newInstance} factory method to
- * create an instance of this fragment.
- */
+import com.example.appabogadostn.crontroller.Database;
+import com.google.android.material.textfield.TextInputLayout;
+
 public class frm_Register3 extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
+    private TextInputLayout etPassword;
 
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
+    private TextInputLayout etConfirmPassword;
 
     public frm_Register3() {
         // Required empty public constructor
-    }
-
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment frm_Register3.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static frm_Register3 newInstance(String param1, String param2) {
-        frm_Register3 fragment = new frm_Register3();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
     }
 
     @Override
@@ -63,19 +31,89 @@ public class frm_Register3 extends Fragment {
         // Inflar el diseño del fragmento
         View view = inflater.inflate(R.layout.frm_register3, container, false);
 
-        // Obtener una referencia al botón btnBackRegister
+        //Referencia a los TextInputLayout
+        etPassword = view.findViewById(R.id.txtRegisterPassword);
+        etConfirmPassword = view.findViewById(R.id.txtConfirmPassword);
+
+        // Obtener una referencia a los Botones
         Button btnBackRegister2 = view.findViewById(R.id.btnBackRegister2);
+        Button btnRegister = view.findViewById(R.id.btnRegisterLawyer);
 
         // Establecer un OnClickListener para el botón
         btnBackRegister2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Realizar la transacción para regresar a frm_Register1
+
+                // Obtener los datos de frm_Register2
+                String identification = getArguments().getString("identification");
+                String username = getArguments().getString("username");
+                String phone = getArguments().getString("phone");
+                String email = getArguments().getString("email");
+
+                // Crear una nueva instancia de frm_Register2
+                frm_Register2 previousFragment = new frm_Register2();
+
+                // Pasar los datos a frm_Register2 usando un Bundle
+                Bundle bundle = new Bundle();
+                bundle.putString("identification", identification);
+                bundle.putString("username", username);
+                bundle.putString("phone", phone);
+                bundle.putString("email", email);
+                previousFragment.setArguments(bundle);
+
+                // Realizar la transacción para regresar a frm_Register2
                 FragmentTransaction transaction = getParentFragmentManager().beginTransaction();
-                transaction.replace(R.id.frmContainerRegister, new frm_Register2()).addToBackStack(null).commit();
+                transaction.replace(R.id.frmContainerRegister, previousFragment).addToBackStack(null).commit();
+            }
+        });
+
+        // Establecer un OnClickListener para el botón de registro
+        btnRegister.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(verificarContrasenas()){
+                    String identification = getArguments().getString("identification");
+                    String username = getArguments().getString("username");
+                    String phone = getArguments().getString("phone");
+                    String email = getArguments().getString("email");
+                    String password = etPassword.getEditText().getText().toString();
+
+                    Database database = new Database(requireContext());
+                    if(database.addLawyer(identification, username, phone, email, password)){
+                        mostrarMensaje("Se registro Con exito");
+                        Intent intent = new Intent(getActivity(), act_Welcome.class);
+                        startActivity(intent);
+                        getActivity().finish(); // Esto cierra la actividad actual después de iniciar la nueva
+                    }else{
+                        mostrarMensaje("Error al agregar usuario");
+                    }
+
+
+                }else{
+                    mostrarMensaje("Contrasenas incorrectas");
+                }
             }
         });
 
         return view;
+    }//Fin del onCreate
+
+
+
+    private boolean verificarContrasenas() {
+        String contrasena = etPassword.getEditText().getText().toString();
+        String confirmarContrasena = etConfirmPassword.getEditText().getText().toString();
+
+        if (contrasena.equals(confirmarContrasena)) {
+            // Las contraseñas son iguales
+            return true;
+        } else {
+            // Las contraseñas no son iguales
+            return false;
+        }
+    }
+    private void mostrarMensaje(String mensaje) {
+        // Puedes mostrar el mensaje de diferentes maneras. Por ejemplo, usando un Toast.
+        Toast.makeText(getActivity(), mensaje, Toast.LENGTH_SHORT).show();
     }
 }

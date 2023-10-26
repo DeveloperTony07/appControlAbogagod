@@ -8,7 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class act_Register extends AppCompatActivity {
+public class act_Register extends AppCompatActivity  {
 
     Button btnBack;
     Fragment fragmentRegister1;
@@ -32,6 +32,6 @@ public class act_Register extends AppCompatActivity {
                 finish();
             }
         });
-    }
+    } // Fin del onCreate
 
 }

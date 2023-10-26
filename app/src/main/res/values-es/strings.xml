@@ -7,12 +7,13 @@
     <string name="subtitle_welcome">Asigna citas facilmente.</string>
     <string name="btn_login">Entrar</string>
     <string name="btn_register">Registrate</string>
+    <string name="btn_user_list">Ver lista de Usuarios</string>
     <!-- End act_Welcome -->
     <!-- Start act_Register -->
     <string name="txt_login">Entrar</string>
     <string name="subtitle_login">Ingrese sus datos para entrar.</string>
     <string name="txt_id_number">Número de Cédula</string>
-    <string name="txt_password">contraseña</string>
+    <string name="txt_password">Contraseña</string>
     <!-- End act_Login-->
     <!-- Start act_Register -->
     <string name="txt_register">Registrarse</string>
@@ -24,5 +25,7 @@
     <string name="txt_back">Volver</string>
     <string name="txt_confirm_password">Confirma tu contraseña</string>
 
+    <!-- txt user list -->
+    <string name="txt_user_list">User list</string>
 
 </resources>

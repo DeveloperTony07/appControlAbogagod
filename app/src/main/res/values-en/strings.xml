@@ -6,6 +6,7 @@
     <string name="subtitle_welcome">Easily assign appointments.</string>
     <string name="btn_login">Login</string>
     <string name="btn_register">Sing Up</string>
+    <string name="btn_user_list">See user list</string>
     <!-- End act_Welcome -->
     <!-- Start act_Register -->
     <string name="txt_login">Login</string>
@@ -24,5 +25,8 @@
     <string name="txt_email">Email</string>
     <string name="txt_back">Back</string>
     <string name="txt_confirm_password">Confirm your password</string>
+
+    <!-- txt user list -->
+    <string name="txt_user_list">User list</string>
 
 </resources>

@@ -9,39 +9,68 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.Toast;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link frm_Register1#newInstance} factory method to
- * create an instance of this fragment.
- */
+import com.google.android.material.textfield.TextInputLayout;
+
 public class frm_Register1 extends Fragment {
 
+    private TextInputLayout etIdentification;
+    private TextInputLayout etUsername;
 
+    //private OnRegisterDataListener dataListener;
+
+    /* Ver si funciona sin el metodo */
     public frm_Register1() {
-        // Required empty public constructor
+        // Constructor vacío requerido por Fragment
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        // Inflar el diseño del fragmento
         View view = inflater.inflate(R.layout.frm_register1, container, false);
 
-        // Obtener una referencia al botón btnBackRegister
+        //Referencia a los ID de los TextInputLayout
+        etIdentification = view.findViewById(R.id.txtRegisterID);
+        etUsername = view.findViewById(R.id.txtRegisterUserName);
+
+        //Referencia al boton
         Button btnNextRegister = view.findViewById(R.id.btnNextRegister1);
 
-        // Establecer un OnClickListener para el botón
         btnNextRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Realizar la transacción para regresar a frm_Register1
-                FragmentTransaction transaction = getParentFragmentManager().beginTransaction();
-                transaction.replace(R.id.frmContainerRegister, new frm_Register2()).addToBackStack(null).commit();
+                // Obtener los datos de los EditText
+                String identification = etIdentification.getEditText().getText().toString();
+                String username = etUsername.getEditText().getText().toString();
+
+                if (validarCampos(identification, username)) {
+                    FragmentTransaction transaction = getParentFragmentManager().beginTransaction();
+                    Bundle bundle = new Bundle();
+                    bundle.putString("identification", identification);
+                    bundle.putString("username", username);
+
+                    frm_Register2 nextFragment = new frm_Register2();
+                    nextFragment.setArguments(bundle);
+
+                    transaction.replace(R.id.frmContainerRegister, nextFragment).addToBackStack(null).commit();
+                } else {
+                    mostrarMensaje("El usuario debe ingresar todos los datos.");
+                }
+
             }
         });
 
         return view;
+    }
+
+    private boolean validarCampos(String identification, String username) {
+        return !identification.isEmpty() && !username.isEmpty();
+    }
+
+    private void mostrarMensaje(String mensaje) {
+        // Puedes mostrar el mensaje de diferentes maneras. Por ejemplo, usando un Toast.
+        Toast.makeText(getActivity(), mensaje, Toast.LENGTH_SHORT).show();
     }
 }
