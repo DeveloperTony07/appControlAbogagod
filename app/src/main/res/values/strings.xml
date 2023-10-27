@@ -13,7 +13,7 @@
     <string name="btn_register">Sing Up</string>
     <!-- btn_seeList -->
     <string name="btn_user_list">See user list</string>
-    
+
     <!-- End act_Welcome -->
 
     <!-- Start act_Login -->
@@ -44,10 +44,12 @@
     <string name="txt_back">Back</string>
     <!-- txt confirm password -->
     <string name="txt_confirm_password">Confirm your password</string>
-    
+
     <!-- act_UserList -->
     <!-- txt- user list -->
     <string name="txt_user_list">User list</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 
 </resources>

@@ -33,7 +33,7 @@ public class frm_Register1 extends Fragment {
 
         //Referencia a los ID de los TextInputLayout
         etIdentification = view.findViewById(R.id.txtRegisterID);
-        etUsername = view.findViewById(R.id.txtRegisterUserName);
+        etUsername = view.findViewById(R.id.txtRegisterTipoCita);
 
         //Referencia al boton
         Button btnNextRegister = view.findViewById(R.id.btnNextRegister1);
