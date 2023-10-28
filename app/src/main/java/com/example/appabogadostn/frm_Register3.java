@@ -71,7 +71,7 @@ public class frm_Register3 extends Fragment {
         btnRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(verificarContrasenas()){
+                if(verifyPasswords()){
                     String identification = getArguments().getString("identification");
                     String username = getArguments().getString("username");
                     String phone = getArguments().getString("phone");
@@ -80,17 +80,17 @@ public class frm_Register3 extends Fragment {
 
                     Database database = new Database(requireContext());
                     if(database.addLawyer(identification, username, phone, email, password)){
-                        mostrarMensaje("Se registro Con exito");
+                        showMessage("Se registro Con exito");
                         Intent intent = new Intent(getActivity(), act_Welcome.class);
                         startActivity(intent);
                         getActivity().finish(); // Esto cierra la actividad actual después de iniciar la nueva
                     }else{
-                        mostrarMensaje("Error al agregar usuario");
+                        showMessage("Error al agregar usuario");
                     }
 
 
                 }else{
-                    mostrarMensaje("Contrasenas incorrectas");
+                    showMessage("Contrasenas incorrectas");
                 }
             }
         });
@@ -100,7 +100,7 @@ public class frm_Register3 extends Fragment {
 
 
 
-    private boolean verificarContrasenas() {
+    private boolean verifyPasswords() {
         String contrasena = etPassword.getEditText().getText().toString();
         String confirmarContrasena = etConfirmPassword.getEditText().getText().toString();
 
@@ -112,7 +112,7 @@ public class frm_Register3 extends Fragment {
             return false;
         }
     }
-    private void mostrarMensaje(String mensaje) {
+    private void showMessage(String mensaje) {
         // Puedes mostrar el mensaje de diferentes maneras. Por ejemplo, usando un Toast.
         Toast.makeText(getActivity(), mensaje, Toast.LENGTH_SHORT).show();
     }

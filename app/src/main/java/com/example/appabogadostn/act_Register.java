@@ -21,7 +21,6 @@ public class act_Register extends AppCompatActivity  {
         btnBack = findViewById(R.id.btnBackTwo);
 
         fragmentRegister1 = new frm_Register1();
-
         getSupportFragmentManager().beginTransaction().add(R.id.frmContainerRegister, fragmentRegister1).commit();
 
         btnBack.setOnClickListener(new View.OnClickListener() {

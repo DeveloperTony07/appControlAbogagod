@@ -45,8 +45,8 @@ public class frm_Register1 extends Fragment {
                 String identification = etIdentification.getEditText().getText().toString();
                 String username = etUsername.getEditText().getText().toString();
 
-                if (validarCampos(identification, username)) {
-                    FragmentTransaction transaction = getParentFragmentManager().beginTransaction();
+                if (validateFields(identification, username)) {
+
                     Bundle bundle = new Bundle();
                     bundle.putString("identification", identification);
                     bundle.putString("username", username);
@@ -54,9 +54,10 @@ public class frm_Register1 extends Fragment {
                     frm_Register2 nextFragment = new frm_Register2();
                     nextFragment.setArguments(bundle);
 
+                    FragmentTransaction transaction = getParentFragmentManager().beginTransaction();
                     transaction.replace(R.id.frmContainerRegister, nextFragment).addToBackStack(null).commit();
                 } else {
-                    mostrarMensaje("El usuario debe ingresar todos los datos.");
+                    showMessage("El usuario debe ingresar todos los datos.");
                 }
 
             }
@@ -65,11 +66,11 @@ public class frm_Register1 extends Fragment {
         return view;
     }
 
-    private boolean validarCampos(String identification, String username) {
+    private boolean validateFields(String identification, String username) {
         return !identification.isEmpty() && !username.isEmpty();
     }
 
-    private void mostrarMensaje(String mensaje) {
+    private void showMessage(String mensaje) {
         // Puedes mostrar el mensaje de diferentes maneras. Por ejemplo, usando un Toast.
         Toast.makeText(getActivity(), mensaje, Toast.LENGTH_SHORT).show();
     }

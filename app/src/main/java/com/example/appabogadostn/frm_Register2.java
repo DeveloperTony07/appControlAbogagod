@@ -42,7 +42,7 @@ public class frm_Register2 extends Fragment {
                 String phone = etPhone.getEditText().getText().toString();
                 String email = etEmail.getEditText().getText().toString();
 
-                if (validarCampos(phone,email)) {
+                if (validateFields(phone,email)) {
 
                     frm_Register3 nextFragment = new frm_Register3();
 
@@ -58,7 +58,7 @@ public class frm_Register2 extends Fragment {
 
                 } else {
                     // Mostrar un mensaje de error
-                    mostrarMensaje("El usuario debe ingresar todos los datos.");
+                    showMessage("El usuario debe ingresar todos los datos.");
                 }
             }
         });
@@ -76,11 +76,11 @@ public class frm_Register2 extends Fragment {
         return view;
     } //Fin del onCreate
 
-    private boolean validarCampos(String phone, String email) {
+    private boolean validateFields(String phone, String email) {
         return !phone.isEmpty() && !email.isEmpty();
     }
 
-    private void mostrarMensaje(String mensaje) {
+    private void showMessage(String mensaje) {
         // Puedes mostrar el mensaje de diferentes maneras. Por ejemplo, usando un Toast.
         Toast.makeText(getActivity(), mensaje, Toast.LENGTH_SHORT).show();
     }
