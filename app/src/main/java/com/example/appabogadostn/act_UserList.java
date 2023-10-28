@@ -1,20 +1,17 @@
-package com.example.appabogadostn.modelo;
+package com.example.appabogadostn;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.RecyclerView;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Adapter;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 
-import com.example.appabogadostn.R;
-import com.example.appabogadostn.act_Welcome;
 import com.example.appabogadostn.crontroller.Database;
+import com.example.appabogadostn.modelo.Lawyer;
 
 import java.util.ArrayList;
 

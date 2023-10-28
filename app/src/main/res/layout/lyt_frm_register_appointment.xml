@@ -26,30 +26,26 @@
 
         </LinearLayout>
 
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/commun_margin" />
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/txtRegisterID"
+                android:id="@+id/txtRegisterNombre"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="39dp" />
 
             </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="@dimen/large_margin" />
+            android:layout_height="@dimen/commun_margin" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -68,10 +64,6 @@
 
         </LinearLayout>
 
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/commun_margin" />
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -84,13 +76,13 @@
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="31dp" />
             </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="@dimen/large_margin" />
+            android:layout_height="@dimen/commun_margin" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -109,10 +101,6 @@
 
         </LinearLayout>
 
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/commun_margin" />
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -125,7 +113,7 @@
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="37dp" />
             </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>
 
@@ -150,23 +138,19 @@
 
         </LinearLayout>
 
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/commun_margin" />
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/txtRegister"
+                android:id="@+id/txtRegisterTelefono"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="38dp" />
             </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>
 
@@ -191,10 +175,6 @@
 
         </LinearLayout>
 
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/commun_margin" />
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -207,9 +187,18 @@
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="42dp" />
+
             </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>
+
+        <Button
+            android:id="@+id/btnRegistrarCita3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/commun_margin"
+            android:text="Registrar" />
 
     </LinearLayout>
 

@@ -32,7 +32,7 @@ public class frm_Register1 extends Fragment {
         View view = inflater.inflate(R.layout.frm_register1, container, false);
 
         //Referencia a los ID de los TextInputLayout
-        etIdentification = view.findViewById(R.id.txtRegisterID);
+        etIdentification = view.findViewById(R.id.txtRegisterNombre);
         etUsername = view.findViewById(R.id.txtRegisterTipoCita);
 
         //Referencia al boton
