@@ -1,27 +1,35 @@
 package com.example.appabogadostn.modelo;
 
 public class Appointment {
-    String LawyerId, appointmentType, appointmentName, clientName, clientID;
-    int clientPhone, id;
+    int id;
+    String lawyerId;
+    String clientName, clientID;
+    int  clientPhone;
+    String appointmentName, appointmentType, time;
+    int pay;
 
     public Appointment() {
         this.id = 0;
-        this.LawyerId = "";
-        this.appointmentType = "";
-        this.appointmentName = "";
+        this.lawyerId = "";
         this.clientName = "";
         this.clientID = "";
         this.clientPhone = 0;
+        this.appointmentName = "";
+        this.appointmentType = "";
+        this.time = "";
+        this.pay = 0;
     }
 
-    public Appointment(int id, String lawyerId, String appointmentType, String appointmentName, String clientName, String clientID, int clientPhone) {
+    public Appointment(int id, String lawyerId, String clientName, String clientID, int clientPhone, String appointmentName, String appointmentType, String time, int pay) {
         this.id = id;
-        this.LawyerId = lawyerId;
-        this.appointmentType = appointmentType;
-        this.appointmentName = appointmentName;
+        this.lawyerId = lawyerId;
         this.clientName = clientName;
         this.clientID = clientID;
         this.clientPhone = clientPhone;
+        this.appointmentName = appointmentName;
+        this.appointmentType = appointmentType;
+        this.time = time;
+        this.pay = pay;
     }
 
     public int getId() {
@@ -33,27 +41,11 @@ public class Appointment {
     }
 
     public String getLawyerId() {
-        return LawyerId;
+        return lawyerId;
     }
 
     public void setLawyerId(String lawyerId) {
-        LawyerId = lawyerId;
-    }
-
-    public String getAppointmentType() {
-        return appointmentType;
-    }
-
-    public void setAppointmentType(String appointmentType) {
-        this.appointmentType = appointmentType;
-    }
-
-    public String getAppointmentName() {
-        return appointmentName;
-    }
-
-    public void setAppointmentName(String appointmentName) {
-        this.appointmentName = appointmentName;
+        this.lawyerId = lawyerId;
     }
 
     public String getClientName() {
@@ -80,16 +72,49 @@ public class Appointment {
         this.clientPhone = clientPhone;
     }
 
+    public String getAppointmentName() {
+        return appointmentName;
+    }
+
+    public void setAppointmentName(String appointmentName) {
+        this.appointmentName = appointmentName;
+    }
+
+    public String getAppointmentType() {
+        return appointmentType;
+    }
+
+    public void setAppointmentType(String appointmentType) {
+        this.appointmentType = appointmentType;
+    }
+
+    public String getTime() {
+        return time;
+    }
+
+    public void setTime(String time) {
+        this.time = time;
+    }
+
+    public int getPay() {
+        return pay;
+    }
+
+    public void setPay(int pay) {
+        this.pay = pay;
+    }
     @Override
     public String toString() {
-        return  "id = " + id + '\'' +
-                "Appointment{" +
-                "LawyerId='" + LawyerId + '\'' +
-                ", appointmentType='" + appointmentType + '\'' +
-                ", appointmentName='" + appointmentName + '\'' +
+        return "Appointment{" +
+                "id=" + id +
+                ", LawyerId='" + lawyerId + '\'' +
                 ", clientName='" + clientName + '\'' +
                 ", clientID='" + clientID + '\'' +
-                ", clientPhone='" + clientPhone + '\'' +
+                ", clientPhone=" + clientPhone +
+                ", appointmentName='" + appointmentName + '\'' +
+                ", appointmentType='" + appointmentType + '\'' +
+                ", time='" + time + '\'' +
+                ", pay=" + pay +
                 '}';
     }
 

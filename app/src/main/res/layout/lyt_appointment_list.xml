@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Act_ListaCitas">
+    tools:context=".act_AppointmentList">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -21,7 +21,7 @@
             android:textSize="20sp" />
 
         <ListView
-            android:id="@+id/listviewCitas"
+            android:id="@+id/listViewAppointments"
             android:layout_width="match_parent"
             android:layout_height="548dp"
             android:layout_margin="@dimen/commun_margin" />

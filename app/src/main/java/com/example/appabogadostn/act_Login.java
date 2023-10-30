@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.example.appabogadostn.crontroller.Database;
+import com.example.appabogadostn.modelo.Lawyer;
 import com.google.android.material.textfield.TextInputLayout;
 
 public class act_Login extends AppCompatActivity {
@@ -53,8 +54,15 @@ public class act_Login extends AppCompatActivity {
                 boolean successfulLogin = db.userLogin(userId, userPassword);
 
                 if(successfulLogin){
-
                     Intent intent = new Intent(act_Login.this, act_Start.class);
+
+                    // get lawyer information
+                    Lawyer loggedLawyer = db.getLawyerInfo(userId);
+
+                    //pass the identification and the username in the act_Start
+                    intent.putExtra("lawyer_identification", loggedLawyer.getIdentification());
+                    intent.putExtra("lawyer_username", loggedLawyer.getUsername());
+
                     startActivity(intent);
                     finish();
                 }else{

@@ -26,7 +26,26 @@
     <string name="txt_back">Back</string>
     <string name="txt_confirm_password">Confirm your password</string>
 
+    <!-- act_userList -->
     <!-- txt user list -->
     <string name="txt_user_list">User list</string>
+
+    <!-- act_Start  -->
+    <string name="txt_welcome">Welcome </string>
+    <string name="subtitle_start">Keep track of your appointment</string>
+    <string name="txt_register_appointment">Register appointment</string>
+    <string name="txt_appointment_list">Appointment list</string>
+
+    <!-- frm_register_appointment -->
+    <string name="txt_client_name">Client name</string>
+    <string name="txt_client_id">Client id</string>
+    <string name="txt_client_phone">Client phone</string>
+
+    <string name="txt_appointment_name">Appointment name</string>
+    <!-- appointment type -->
+    <string name="txt_appointment_type">Appointment type</string>
+    <!-- appointment time -->
+    <string name = "txt_appointment_time">Appointment Time</string>
+    <string name = "txt_payment_for_the_appointment">Payment for the appointment</string>
 
 </resources>

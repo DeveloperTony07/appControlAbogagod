@@ -48,13 +48,34 @@
     <!-- act_UserList -->
     <!-- txt- user list -->
     <string name="txt_user_list">User list</string>
-<<<<<<< Updated upstream
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-=======
-    <string name="dummy_button">Dummy Button</string>
-    <string name="dummy_content">DUMMY\nCONTENT</string>
->>>>>>> Stashed changes
+
+    <!-- act_Start -->
+    <!-- txt welcome -->
+    <string name="txt_welcome">Welcome </string>
+    <!-- txt subtitle Start -->
+    <string name="subtitle_start">Keep track of your appointment</string>
+    <!-- txt register appointment -->
+    <string name="txt_register_appointment">Register appointment</string>
+    <!-- txt appointment list -->
+    <string name="txt_appointment_list">Appointment list</string>
+
+    <!-- frm_register_appointment -->
+    <!-- txt client name-->
+    <string name="txt_client_name">Client name</string>
+    <!-- txt client id -->
+    <string name="txt_client_id">Client id</string>
+    <!-- txt client phone -->
+    <string name="txt_client_phone">Client phone</string>
+    <!-- txt appointment name -->
+    <string name="txt_appointment_name">Appointment name</string>
+    <!-- txt appointment type -->
+    <string name="txt_appointment_type">Appointment type</string>
+    <!-- txt appointment time -->
+    <string name = "txt_appointment_time">Appointment Time</string>
+    <!-- txt payment for the appointment -->
+    <string name = "txt_payment_for_the_appointment">Payment for the appointment</string>
+
+
 
 
 </resources>

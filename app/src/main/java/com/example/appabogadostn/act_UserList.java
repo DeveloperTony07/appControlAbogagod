@@ -26,7 +26,7 @@ public class act_UserList extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.act_user_list);
+        setContentView(R.layout.lyt_user_list);
         btnBack = findViewById(R.id.btnBackUserList);
         userList = findViewById(R.id.lawyersList);
 

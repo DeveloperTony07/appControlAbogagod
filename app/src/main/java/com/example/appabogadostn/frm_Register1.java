@@ -32,8 +32,8 @@ public class frm_Register1 extends Fragment {
         View view = inflater.inflate(R.layout.frm_register1, container, false);
 
         //Referencia a los ID de los TextInputLayout
-        etIdentification = view.findViewById(R.id.txtRegisterNombre);
-        etUsername = view.findViewById(R.id.txtRegisterTipoCita);
+        etIdentification = view.findViewById(R.id.txtRegisterClientName);
+        etUsername = view.findViewById(R.id.txtRegisterClientID);
 
         //Referencia al boton
         Button btnNextRegister = view.findViewById(R.id.btnNextRegister1);
@@ -70,8 +70,7 @@ public class frm_Register1 extends Fragment {
         return !identification.isEmpty() && !username.isEmpty();
     }
 
-    private void showMessage(String mensaje) {
-        // Puedes mostrar el mensaje de diferentes maneras. Por ejemplo, usando un Toast.
-        Toast.makeText(getActivity(), mensaje, Toast.LENGTH_SHORT).show();
+    private void showMessage(String message) {
+        Toast.makeText(getActivity(), message, Toast.LENGTH_SHORT).show();
     }
 }

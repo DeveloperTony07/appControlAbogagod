@@ -3,12 +3,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".frm_register_appointment">
+    tools:context=".frm_Register_Appointment">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/large_margin" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -19,12 +23,16 @@
                 android:id="@+id/textViewcleitne"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Nombre de cliente"
+                android:text="@string/txt_client_name"
                 android:textColor="@color/dark_blue"
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
         </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/small_margin" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -32,13 +40,13 @@
             android:orientation="horizontal">
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/txtRegisterNombre"
+                android:id="@+id/txtRegisterClientName"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
-                    android:layout_height="39dp" />
+                    android:layout_height="wrap_content" />
 
             </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>
@@ -57,12 +65,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Tipo de cita"
+                android:text="@string/txt_client_id"
                 android:textColor="@color/dark_blue"
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
         </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/small_margin" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -70,13 +82,13 @@
             android:orientation="horizontal">
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/txtRegisterTipoCita"
+                android:id="@+id/txtRegisterClientID"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
-                    android:layout_height="31dp" />
+                    android:layout_height="wrap_content" />
             </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>
 
@@ -94,12 +106,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Id del cita"
+                android:text="@string/txt_client_phone"
                 android:textColor="@color/dark_blue"
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
         </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/small_margin" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -107,13 +123,13 @@
             android:orientation="horizontal">
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/txtRegisterIdCita"
+                android:id="@+id/txtRegisterClientPhone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
-                    android:layout_height="37dp" />
+                    android:layout_height="wrap_content" />
             </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>
 
@@ -131,12 +147,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Numero de telefono"
+                android:text="@string/txt_appointment_name"
                 android:textColor="@color/dark_blue"
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
         </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/small_margin" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -144,13 +164,13 @@
             android:orientation="horizontal">
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/txtRegisterTelefono"
+                android:id="@+id/txtRegisterAppointmentName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
-                    android:layout_height="38dp" />
+                    android:layout_height="wrap_content" />
             </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>
 
@@ -168,12 +188,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Costo"
+                android:text="@string/txt_appointment_type"
                 android:textColor="@color/dark_blue"
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
         </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/small_margin" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -181,24 +205,36 @@
             android:orientation="horizontal">
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/txtRegisterCosto"
+                android:id="@+id/txtRegisterAppointmentType"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
-                    android:layout_height="42dp" />
+                    android:layout_height="wrap_content" />
 
             </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>
 
-        <Button
-            android:id="@+id/btnRegistrarCita3"
-            android:layout_width="wrap_content"
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/commun_margin" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_margin="@dimen/commun_margin"
-            android:text="Registrar" />
+            android:orientation="horizontal"
+            android:layout_marginStart="@dimen/marginx_buttonsStart"
+            android:layout_marginEnd="@dimen/marginx_buttonsStart">
+
+            <Button
+                android:id="@+id/btnRegisterAppointmentNext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/txt_next"
+                android:backgroundTint="@color/dark_blue"/>
+        </LinearLayout>
 
     </LinearLayout>
 

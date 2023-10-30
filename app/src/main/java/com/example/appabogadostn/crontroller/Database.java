@@ -3,12 +3,8 @@ package com.example.appabogadostn.crontroller;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
-import android.database.DatabaseErrorHandler;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 
 import com.example.appabogadostn.modelo.Appointment;
 import com.example.appabogadostn.modelo.Lawyer;
@@ -43,8 +39,11 @@ public class Database extends SQLiteOpenHelper {
             "clientName TEXT NOT NULL," +
             "clientID TEXT NOT NULL," +
             "clientPhone INTEGER NOT NULL," +
+            "time TEXT NOT NULL," +
+            "pay INTEGER NOT NULL," +  // Agregando coma
             "FOREIGN KEY(lawyer_identification) REFERENCES lawyers(identification)" +
             ");";
+
 
     public Database(Context context) {
         super(context, NOMBRE_DB, null, VERSION_DB);
@@ -59,7 +58,6 @@ public class Database extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-
     }
     /*------------------------------------------------------------------------*/
 
@@ -82,6 +80,25 @@ public class Database extends SQLiteOpenHelper {
         long result = db.insert("lawyers", null,values);
         return result != -1;
     }
+
+    //Add appointment
+    public boolean addAppointment(String lawyerIdentification, String clientName, String clientID, String clientPhone,  String appointmentType, String appointmentName, String time, int pay) {
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        ContentValues values = new ContentValues();
+        values.put("lawyer_identification", lawyerIdentification);
+        values.put("clientName", clientName);
+        values.put("clientID", clientID);
+        values.put("clientPhone", clientPhone);
+        values.put("appointmentType", appointmentType);
+        values.put("appointmentName", appointmentName);
+        values.put("time", time);
+        values.put("pay", pay);
+
+        long result = db.insert("appointments", null, values);
+        return result != -1;
+    }
+
 
     //Return user list
     public ArrayList<Lawyer> getLawyers(){
@@ -106,7 +123,7 @@ public class Database extends SQLiteOpenHelper {
     }
 
     /* User login */
-
+    // login start
     public boolean userLogin(String identification, String password){
         SQLiteDatabase db = this.getReadableDatabase();
         String[] columns = {"id"};
@@ -120,8 +137,7 @@ public class Database extends SQLiteOpenHelper {
         return  successfulLogin;
     }
 
-
-
+    //Return appointment list of the lawyer
     public ArrayList<Appointment> getAppointmentsForLawyer(String lawyerIdentification) {
         ArrayList<Appointment> appointments = new ArrayList<>();
         SQLiteDatabase db = this.getReadableDatabase();
@@ -141,6 +157,8 @@ public class Database extends SQLiteOpenHelper {
                 appointment.setClientName(cursor.getString(4));
                 appointment.setClientID(cursor.getString(5));
                 appointment.setClientPhone(cursor.getInt(6));
+                appointment.setTime(cursor.getString(7));
+                appointment.setPay(cursor.getInt(8));
                 appointments.add(appointment);
             } while (cursor.moveToNext());
         }
@@ -149,6 +167,8 @@ public class Database extends SQLiteOpenHelper {
         return appointments;
     }
 
+
+    //return "username ad ID" of lawyer
     public Lawyer getLawyerInfo(String identification) {
         SQLiteDatabase db = this.getReadableDatabase();
         String[] columns = {"username"};

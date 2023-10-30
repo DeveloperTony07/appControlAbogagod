@@ -25,7 +25,23 @@
     <string name="txt_back">Volver</string>
     <string name="txt_confirm_password">Confirma tu contraseña</string>
 
-    <!-- txt user list -->
+    <!-- act_UserList -->
     <string name="txt_user_list">User list</string>
+
+    <!-- act_Start  -->
+    <string name="txt_welcome">Bienvenido </string>
+    <string name="subtitle_start">Lleva un control de tus citas.</string>
+    <string name="txt_register_appointment">Registrar cita</string>
+    <string name="txt_appointment_list">Lista de citas</string>
+
+    <!-- frm_register_appointment -->
+    <!-- txt appointment name -->
+    <string name="txt_client_name">Nombre del cliente</string>
+    <string name="txt_client_id">Cédula del cliente</string>
+    <string name="txt_client_phone">Número de telefono</string>
+    <string name="txt_appointment_name">Nombre de la cita</string>
+    <string name="txt_appointment_type">Tipo de cita</string>
+    <string name = "txt_appointment_time">Tiempo de la cita</string>
+    <string name = "txt_payment_for_the_appointment">Pago de la cita</string>
 
 </resources>

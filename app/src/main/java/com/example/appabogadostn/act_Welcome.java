@@ -45,7 +45,7 @@ public class act_Welcome extends AppCompatActivity {
         btnUserList.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(act_Welcome.this, Act_RegistroCitas.class);
+                Intent intent = new Intent(act_Welcome.this, act_UserList.class);
                 startActivity(intent);
             }
         });
