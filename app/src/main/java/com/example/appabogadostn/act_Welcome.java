@@ -24,7 +24,7 @@ public class act_Welcome extends AppCompatActivity {
 
         btnLogin = findViewById(R.id.btnLogin);
         btnSingUp = findViewById(R.id.btnSingUp);
-        btnUserList = findViewById(R.id.btnUserList);
+        //btnUserList = findViewById(R.id.btnUserList);
 
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -42,12 +42,12 @@ public class act_Welcome extends AppCompatActivity {
             }
         });
 
-        btnUserList.setOnClickListener(new View.OnClickListener() {
+        /*btnUserList.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(act_Welcome.this, act_UserList.class);
                 startActivity(intent);
             }
-        });
+        });*/
     }
 }

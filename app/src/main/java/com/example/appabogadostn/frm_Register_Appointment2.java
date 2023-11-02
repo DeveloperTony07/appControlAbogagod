@@ -53,7 +53,7 @@ public class frm_Register_Appointment2 extends Fragment {
 
                 if(db.addAppointment(lawyerID, clientName, clientID, clientPhone, appointmentName, appointmentType, time, pay)){
                     showMessage("added successfully");
-                    Intent intent = new Intent(getActivity(), act_AppointmentList.class);
+                    Intent intent = new Intent(getActivity(), act_inicio.class);
 
                     // get lawyer information
                     Lawyer loggedLawyer = db.getLawyerInfo(lawyerID);

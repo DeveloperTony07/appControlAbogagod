@@ -22,7 +22,7 @@
             android:orientation="horizontal">
             <!-- title -->
             <TextView
-                android:id="@+id/textView"
+                android:id="@+id/txtHello"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -120,16 +120,6 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_marginStart="@dimen/marginx_bottons"
-            android:layout_marginEnd="@dimen/marginx_bottons">
-
-            <Button
-                android:id="@+id/btnUserList"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:backgroundTint="@color/dark_blue"
-                android:text="@string/btn_user_list" />
-
-        </LinearLayout>
+            android:layout_marginEnd="@dimen/marginx_bottons"/>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

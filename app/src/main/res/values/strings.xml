@@ -71,11 +71,9 @@
     <!-- txt appointment type -->
     <string name="txt_appointment_type">Appointment type</string>
     <!-- txt appointment time -->
-    <string name = "txt_appointment_time">Appointment Time</string>
+    <string name="txt_appointment_time">Appointment Time</string>
     <!-- txt payment for the appointment -->
-    <string name = "txt_payment_for_the_appointment">Payment for the appointment</string>
-
-
+    <string name="txt_payment_for_the_appointment">Payment for the appointment</string>
 
 
 </resources>

@@ -105,17 +105,13 @@ public class Appointment {
     }
     @Override
     public String toString() {
-        return "Appointment{" +
-                "id=" + id +
-                ", LawyerId='" + lawyerId + '\'' +
-                ", clientName='" + clientName + '\'' +
-                ", clientID='" + clientID + '\'' +
-                ", clientPhone=" + clientPhone +
-                ", appointmentName='" + appointmentName + '\'' +
-                ", appointmentType='" + appointmentType + '\'' +
-                ", time='" + time + '\'' +
-                ", pay=" + pay +
-                '}';
+        return "Client Name: " + clientName + '\n' +
+                "Client ID: " + clientID + '\n' +
+                "Client Phone: " + clientPhone + '\n' +
+                "Appointment Name: " + appointmentName + '\n' +
+                "Appointment Type: " + appointmentType + '\n' +
+                "Time: " + time + '\n' +
+                "Pay: " + pay;
     }
 
 }

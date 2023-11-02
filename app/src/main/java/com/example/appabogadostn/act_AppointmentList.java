@@ -17,8 +17,8 @@ import java.util.ArrayList;
 public class act_AppointmentList extends AppCompatActivity {
 
     ListView appointmentList;
-    ArrayAdapter adapter;
-    Database db;
+    ArrayAdapter adapter1;
+    Database db1;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -30,12 +30,12 @@ public class act_AppointmentList extends AppCompatActivity {
         Intent intent = getIntent();
         String lawyerID = intent.getStringExtra("lawyer_identification");
 
-        db = new Database(this);
+        db1 = new Database(this);
         // Obtén la lista de abogados
-        ArrayList<Appointment> lawyers = db.getAppointmentsForLawyer(lawyerID);
+        ArrayList<Appointment> lawyers = db1.getAppointmentsForLawyer(lawyerID);
 
-        adapter= new ArrayAdapter(act_AppointmentList.this, android.R.layout.simple_list_item_1, lawyers);
-        appointmentList.setAdapter(adapter);
+        adapter1= new ArrayAdapter(act_AppointmentList.this, android.R.layout.simple_list_item_1, lawyers);
+        appointmentList.setAdapter(adapter1);
     }
 
 }
