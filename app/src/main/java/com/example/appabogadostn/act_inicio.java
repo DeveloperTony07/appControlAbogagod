@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
@@ -24,7 +25,7 @@ public class act_inicio extends AppCompatActivity {
     ArrayAdapter adapter;
     Database db;
     Button btnAgregar;
-
+    Appointment appointment;
     Lawyer logUser;
     TextView txtHello;
 
@@ -68,5 +69,32 @@ public class act_inicio extends AppCompatActivity {
 
             }
         });
+
+        ListaInicio.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+            appointment = db.getAppointmentPhoneNumber()
+
+
+
+            }
+        });
+
     }
+
+
+    //btnLlamar.setOnClickListener(new View.OnClickListener() {
+    //    @Override
+    //    public void onClick(View view) {
+    //        if(txtTelefono.getText().toString().isEmpty()){
+    //            Toast.makeText(getApplicationContext(),"Por favor ingrese un numero de telefono",
+    //                    Toast.LENGTH_LONG).show();
+    //        }else{
+    //            int telefono= Integer.parseInt(txtTelefono.getText().toString());
+    //            Intent llamar = new Intent(Intent.ACTION_CALL,Uri.parse("tel:"+telefono));
+    //            startActivity(llamar);
+    //        }
+    //    }
+    //});
+
 }

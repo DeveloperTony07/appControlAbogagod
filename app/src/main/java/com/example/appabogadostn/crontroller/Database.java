@@ -188,4 +188,23 @@ public class Database extends SQLiteOpenHelper {
         return lawyer;
     }
 
+    public String getAppointmentPhoneNumber(String clientId) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        String[] columns = {"clientPhone"};
+        String selection = "clientId = ?";
+        String[] selectionArgs = {clientId};
+
+        Cursor cursor = db.query("appointments", columns, selection, selectionArgs, null, null, null);
+
+       Appointment appointment1 = null;
+        if (cursor.moveToFirst()) {
+            appointment1 = new Appointment();
+            appointment1.setClientPhone(cursor.getInt(0));
+        }
+
+        cursor.close();
+        return appointment1;
+    }
+
+
 }
