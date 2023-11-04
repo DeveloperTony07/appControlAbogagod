@@ -43,5 +43,6 @@
     <string name="txt_appointment_type">Tipo de cita</string>
     <string name = "txt_appointment_time">Tiempo de la cita</string>
     <string name = "txt_payment_for_the_appointment">Pago de la cita</string>
+    <string name="txt_hello">Hola</string>
 
 </resources>

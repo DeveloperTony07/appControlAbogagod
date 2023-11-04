@@ -73,7 +73,7 @@ public class act_inicio extends AppCompatActivity {
         ListaInicio.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-            appointment = db.getAppointmentPhoneNumber()
+            //appointment = db.getAppointmentPhoneNumber();
 
 
 

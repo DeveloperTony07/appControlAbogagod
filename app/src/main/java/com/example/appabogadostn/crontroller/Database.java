@@ -187,7 +187,7 @@ public class Database extends SQLiteOpenHelper {
         cursor.close();
         return lawyer;
     }
-
+/*
     public String getAppointmentPhoneNumber(String clientId) {
         SQLiteDatabase db = this.getReadableDatabase();
         String[] columns = {"clientPhone"};
@@ -205,6 +205,8 @@ public class Database extends SQLiteOpenHelper {
         cursor.close();
         return appointment1;
     }
+    */
+
 
 
 }

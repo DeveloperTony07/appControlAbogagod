@@ -54,7 +54,7 @@ public class act_Login extends AppCompatActivity {
                 boolean successfulLogin = db.userLogin(userId, userPassword);
 
                 if(successfulLogin){
-                    Intent intent = new Intent(act_Login.this, act_inicio.class);
+                    Intent intent = new Intent(act_Login.this, act_Start.class);
 
                     // get lawyer information
                     Lawyer loggedLawyer = db.getLawyerInfo(userId);

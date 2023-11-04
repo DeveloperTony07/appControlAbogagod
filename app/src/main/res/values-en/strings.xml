@@ -47,5 +47,6 @@
     <!-- appointment time -->
     <string name = "txt_appointment_time">Appointment Time</string>
     <string name = "txt_payment_for_the_appointment">Payment for the appointment</string>
+    <string name="txt_hello">Hello</string>
 
 </resources>

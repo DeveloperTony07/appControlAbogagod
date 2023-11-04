@@ -38,7 +38,7 @@ public class frm_Register_Appointment extends Fragment {
 
         Bundle args = getArguments();
 
-        String lawyerIdentification = args.getString("lawyer_identification");
+        String lawyerIdentification = args.getString("lawyerID");
 
 
         etClientName = view.findViewById(R.id.txtRegisterClientName);
